@@ -4,6 +4,7 @@ require('dotenv').config({
 
 const express = require('express');
 const consign = require('consign');
+const { errors } = require('celebrate');
 
 module.exports = () => {
     const app = express();
@@ -13,6 +14,8 @@ module.exports = () => {
     consign()
         .include('src/routes')
         .into(app);
+
+    app.use(errors());
 
     return app;
 }

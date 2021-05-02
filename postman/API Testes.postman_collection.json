@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c3fff4c0-2362-481c-ba78-213253aa22ab",
+		"_postman_id": "45c1d98a-ba29-4896-8af0-ac913318a7c8",
 		"name": "API Testes",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -285,7 +285,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \r\n    \"NOME\": \"Playstation 5\",\r\n    \"COR\": \"Branco\",\r\n    \"TAMANHO\": \"39 CM\",\r\n    \"VALOR\": 4799.99\r\n}",
+							"raw": "{ \r\n    \"nome\": \"Playstation 5\",\r\n    \"cor\": \"Branco\",\r\n    \"tamanho\": \"39 CM\",\r\n    \"valor\": 4799.99\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

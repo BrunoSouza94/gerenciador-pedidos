@@ -9,6 +9,7 @@
     "test": "SET NODE_ENV=test&& node tests/utils/initDB.js && jest --forceExit -i && node tests/utils/clearDB.js"
   },
   "dependencies": {
+    "celebrate": "^14.0.0",
     "consign": "^0.1.6",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
