@@ -49,7 +49,7 @@ module.exports = {
     delete(req, res) {
         const id = req.params.id;
 
-        const sql = `delete from cliente where ID_CLIENTE = ${id}`;
+        const sql = `DELETE FROM CLIENTE WHERE ID_CLIENTE = ${id}`;
 
         dbConnection.query(sql, (error) => {
             if (error) return res.status(500).json(error);
