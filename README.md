@@ -3,10 +3,10 @@ API para gerenciamento de pedidos
 
 Configurações para execução do servidor:
 
-    Necessário instalação do NodeJS.
-    Necessário instalação do Postman.
+    Necessário instalação do NodeJS: https://nodejs.org/en/download/
+    Necessário instalação do Postman: https://www.postman.com/downloads/
 
-    Necessário instalação do mysql server e então:
+    Necessário instalação do mysql server e então: https://dev.mysql.com/downloads/mysql/
         1 - Criar uma instância do mysql apontando para localhost:3306, com usuário: root e senha: admin;
         2 - dentro desta instância, criar schemas gerenciamento-pedidos e gerenciamento-pedidos-tests;
 
