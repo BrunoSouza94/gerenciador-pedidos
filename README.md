@@ -19,8 +19,9 @@ Configurações para execução do servidor:
     Testes Integrados e Unitários:
         - As rotas de cliente e produto serão testadas através de testes de integração;
         - O método que gera o html para o email e o relatório será testado através de um teste unitário;
-        - Caso esteja utilizando linux, alterar o script de test no package.json para:
-            "export NODE_ENV=test&& node tests/utils/initDB.js && jest --forceExit -i && node tests/utils/clearDB.js"
+        - Caso esteja utilizando linux, alterar os scripts de test no package.json para:
+            * "pretest": "export NODE_ENV=test&& node tests/utils/clearDB.js",
+            * "test": "export NODE_ENV=test&& node tests/utils/initDB.js && jest --forceExit -i"
         - Para executar os testes, execute no terminal, dentro do diretório do projeto: yarn test ou npm test;
 
     Demais Testes de Rotas:
