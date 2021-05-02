@@ -1,0 +1,676 @@
+{
+	"info": {
+		"_postman_id": "d45ddc7d-678b-4083-a34c-8dda3b393d3a",
+		"name": "API Testes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Create Cliente",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nome\": \"Bruno\",\r\n    \"cpf\": \"453.058.138-16\",\r\n    \"sexo\": \"Masculino\",\r\n    \"email\": \"bruno.souza_@outlook.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"data_pedido\": \"2021-04-30\",\r\n    \"observacoes\": \"Entregar somente para Bruno\",\r\n    \"forma_pagamento\": \"Cartão de Crédito - Online\",\r\n    \"id_cliente\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pedido",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nome\": \"Bruno\",\r\n    \"cpf\": \"453.058.138-16\",\r\n    \"sexo\": \"Masculino\",\r\n    \"email\": \"amandacs02@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3333/pedido/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"data_pedido\": \"2021-05-01\",\r\n    \"observacoes\": \"Entregar somente para qualquer morador\",\r\n    \"forma_pagamento\": \"Cartão de Crédito - Online\",\r\n    \"id_cliente\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/pedido/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3333/pedido/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto-Pedido",
+			"item": [
+				{
+					"name": "Create Cliente p/ Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nome\": \"Bruno\",\r\n    \"cpf\": \"453.058.138-16\",\r\n    \"sexo\": \"Masculino\",\r\n    \"email\": \"bruno.souza_@outlook.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Produto 1 p/ Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"NOME\": \"Playstation 5\",\r\n    \"COR\": \"Branco\",\r\n    \"TAMANHO\": \"39 CM\",\r\n    \"VALOR\": 4799.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Produto 2 p/ Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"NOME\": \"Xbox Series X\",\r\n    \"COR\": \"Preto\",\r\n    \"TAMANHO\": \"31 CM\",\r\n    \"VALOR\": 4499.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Pedido  p/ Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"data_pedido\": \"2021-04-30\",\r\n    \"observacoes\": \"Entregar somente para Bruno\",\r\n    \"forma_pagamento\": \"Cartão de Crédito - Online\",\r\n    \"id_cliente\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Produto-Pedido 1",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id_pedido\": 2,\r\n    \"id_produto\": 2,\r\n    \"quantidade\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/produto-pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto-pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Produto-Pedido 2",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id_pedido\": 2,\r\n    \"id_produto\": 3,\r\n    \"quantidade\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/produto-pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto-pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nome\": \"Bruno\",\r\n    \"cpf\": \"453.058.138-16\",\r\n    \"sexo\": \"Masculino\",\r\n    \"email\": \"amandacs02@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/produto-pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto-pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3333/produto-pedido/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto-pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id_pedido\": 2,\r\n    \"id_produto\": 1,\r\n    \"quantidade\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/produto-pedido/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto-pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido - após Produto-Pedido",
+			"item": [
+				{
+					"name": "Email Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3333/pedido/2/sendmail",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido",
+								"2",
+								"sendmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/pdf",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3333/pedido/2/report",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"pedido",
+								"2",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exclusão Produto-Pedido",
+			"item": [
+				{
+					"name": "Delete Produto-Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3333/produto-pedido/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto-pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
