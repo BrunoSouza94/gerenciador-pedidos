@@ -323,7 +323,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \r\n    \"NOME\": \"Xbox Series X\",\r\n    \"COR\": \"Preto\",\r\n    \"TAMANHO\": \"31 CM\",\r\n    \"VALOR\": 4499.99\r\n}",
+							"raw": "{ \r\n    \"nome\": \"Xbox Series X\",\r\n    \"cor\": \"Preto\",\r\n    \"tamanho\": \"31 CM\",\r\n    \"valor\": 4499.99\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
